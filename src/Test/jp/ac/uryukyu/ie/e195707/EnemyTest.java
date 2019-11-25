@@ -2,6 +2,8 @@ package jp.ac.uryukyu.ie.e195707;
 
 import org.junit.jupiter.api.Test;
 
+import java.security.KeyStore;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EnemyTest {
@@ -13,11 +15,11 @@ public class EnemyTest {
         int heroHP = 10;
         Hero hero = new Hero("テスト勇者", heroHP, 5);
         Enemy enemy = new Enemy("テストスライム", 6, 3);
-        enemy.dead = true;
+        enemy.setDead(true);
         for(int i=0; i<10; i++) {
             enemy.attack(hero); //乱数で0ダメージとなることもあるため、複数回実行してみる。
         }
-        assertEquals(heroHP, hero.hitPoint);
+        assertEquals(heroHP, hero.getHitPoint());
     }
 
 }
