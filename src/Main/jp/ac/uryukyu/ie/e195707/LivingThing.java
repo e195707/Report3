@@ -62,8 +62,8 @@ public class LivingThing {
         return hitPoint;
     }
 
-    public void setDead(boolean boo){
-        this.dead = boo;
+    public void setDead(boolean dead2){
+        this.dead = dead2;
     }
 
     public void cal_damage(int damame){
